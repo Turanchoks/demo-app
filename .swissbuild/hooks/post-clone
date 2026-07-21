@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# swiss-build post-clone hook — make a fresh clone of this Expo app buildable in CI:
+# install JS deps, then generate the native iOS project (expo prebuild runs pod install).
+# Runs after checkout + cache-restore, before the xcodebuild step. Best-effort caches
+# (npm/CocoaPods) are restored beforehand so repeat builds are fast.
+set -euo pipefail
+export CI=1
+echo "[post-clone] npm ci"
+npm ci
+echo "[post-clone] expo prebuild (ios) — generates ios/ + pod install"
+npx expo prebuild --platform ios
+echo "[post-clone] done: $(ls -d ios/*.xcworkspace 2>/dev/null || echo 'NO WORKSPACE')"
