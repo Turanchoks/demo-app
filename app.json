@@ -8,10 +8,10 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.remneys.demoapp"
+      "bundleIdentifier": "com.remneys.swissbuildtest"
     },
     "android": {
-      "package": "com.remneys.demoapp",
+      "package": "com.remneys.swissbuildtest",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
