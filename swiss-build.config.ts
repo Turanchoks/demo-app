@@ -3,6 +3,6 @@ export default {
   android: { enabled: true, projectDir: "android", gradleWrapper: "android/gradlew" },
   ios: {
     enabled: true, scheme: "demoapp", workspace: "ios/demoapp.xcworkspace",
-    signing: { mode: "asc-api", teamId: "LQPQQX6JP6", bundleId: "com.remneys.swissbuildtest", certificateType: "DISTRIBUTION", profileType: "IOS_APP_STORE", profileSpecifier: "SwissBuild Test App Store", codeSignIdentity: "Apple Distribution" }
+    signing: { mode: "managed", teamId: "LQPQQX6JP6", bundleId: "com.remneys.swissbuildtest", certificateType: "DISTRIBUTION", profileType: "IOS_APP_STORE", codeSignIdentity: "Apple Distribution" }
   }
 };
